@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border: solid 1px red; */
+}
+body{
+    width: 980px;
+    background-color: black;
+    margin: auto;
+
+}
+#wrapper{
+    width: 735px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    color: white;
+    background-color: rgb(40, 6, 68);
+}
+#left{
+    width: 49%;
+    display: inline-block;
+    border-right: solid 1px red;
+}
+#right{
+    width: 49%;
+    display: inline-block;
+    border-left: solid 1px red;
+    vertical-align: top;
+}
+.bttn{
+    padding: 5px;
+    border: solid 1px white;
+    border-radius: 4px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 5px goldenrod;
+}
+#rbtn{
+    margin-left: 70%;
+}
+#display{
+    width: 90%;
+    
+/*    background-color: white;*/
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 1px white;
+}
+#area{
+    padding: 5px;
+    font-weight: bold;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5px 0px 10px 30px;
+}
+
+/* These are the selectable colors */
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: limegreen;
+}
+.big{
+    font-size: 1.4em;
+}
+.normal{
+    font-size: 1.0em;
+}
+

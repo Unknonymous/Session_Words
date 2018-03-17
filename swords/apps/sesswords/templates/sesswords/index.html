@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sesswords/css/styles.css' %}">
+    
+
+    <title>Session Words</title>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div id="left">
+            <h1>Add a new word</h1>
+            <form action="/process" method="POST">
+                {% csrf_token %}
+                <input type="text" name='newWord' id='area'><br>
+                
+                <input type="radio" name="variant" value="red"> Red<br>
+                <input type="radio" name="variant" value="green"> Green<br>
+                <input type="radio" name="variant" value="blue"> Blue<br>
+                <br>
+                <input type="checkbox" name="size" value="big"> Show in a Bigger font.<br>
+                <br>
+                <input type='submit' value='Add to Session' class='bttn'>
+            </form>
+        </div>
+            
+
+        <div id="right">            
+            <form action="/clear" method="GET">
+                {% csrf_token %}
+                <input type='submit' value="Clear Session" class="bttn" id="rbtn">
+            </form>
+
+            <div id='display'>
+
+                {% for item in request.session.log %}
+                    <p><span class='{{item.color}} {{item.size}}'> {{item.word}} </span> - added at {{ item.time }}, on {{ item.date }}</p>
+                {% endfor %}     
+                        
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
